@@ -1,7 +1,7 @@
 # random_gen
 Simple random table generator for clinical trials - R/Shiny app
 
-One of the things I most like from R + Shiny is that it enables me to serve the power and flexibility of R in small "chunks" to cover different needs, allowing people not used to R to benefit from it. However, what I like most is that's really fun and easy to program those utilities for a person without any specific programming background.
+One of the things I most like from [R](https://www.r-project.org/) + [Shiny](http://shiny.rstudio.com/) is that it enables me to serve the power and flexibility of R in small "chunks" to cover different needs, allowing people not used to R to benefit from it. However, what I like most is that's really fun and easy to program those utilities for a person without any specific programming background.
 
 Here's a small hack done in R/Shiny: it covered an urgent need for a study involving patient randomisation to two branches of treatment, in what is commonly known as a clinical trial. This task posed some challenges:
 
@@ -15,7 +15,7 @@ To tackle the points above, my app should have two main features:
 
 Here's how i got it to work:
 
-- The very core of this Shiny app is a combination between the set.seed and sample R functions. The PIN number (the set.seed argument) works like a secret passcode that links to a given random table. E.g., every time I enter 5432, the random tables will look the same. This protects from accidental blindness disclosure, as nobody can find the correct random table without the proper PIN, even if they can access the app's source code.
+- The very core of this Shiny app is a combination between the [set.seed](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Random.html) and [sample](https://stat.ethz.ch/R-manual/R-devel/library/base/html/sample.html) R functions. The PIN number (the set.seed argument) works like a secret passcode that links to a given random table. E.g., every time I enter 5432, the random tables will look the same. This protects from accidental blindness disclosure, as nobody can find the correct random table without the proper PIN, even if they can access the app's source code.
 
 - The tables are created column by column, ordered at first. Then we proceed to randomize (via the sample function) both the treatment column (in the random table) and the Group column (in the PIN table).
 
