@@ -13,7 +13,7 @@ To tackle the points above, my app should have two main features:
 - The sponsor (here, a medical doctor) must be able to effectively control study blindness and also provide emergency blind disclosure. This control should extend to data analysis to minimize bias favoring either treatment.
 - R has tools to create random samples, but the MD in charge of the study sponsoring doesn't know how to use R. We needed a friendly interface for random table creation. 
 
-Here's how i got it to work:
+Here's how I got it to work:
 
 - The very core of this Shiny app is a combination between the [**set.seed**](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Random.html) and [**sample**](https://stat.ethz.ch/R-manual/R-devel/library/base/html/sample.html) R functions. The PIN number (the **set.seed** argument) works like a secret passcode that links to a given random table. E.g., every time I enter '5432', the random tables will look the same. This protects from accidental blindness disclosure, as nobody can find the correct random table without the proper PIN, *even if they can access the app's source code*.
 
