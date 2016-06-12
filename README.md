@@ -6,7 +6,7 @@ One of the things I most like from [R](https://www.r-project.org/) + [Shiny](htt
 Here's a small hack done in R/Shiny: it covered an urgent need for a study involving patient randomisation to two branches of treatment, in what is commonly known as a clinical trial. This task posed some challenges:
 
 - First, this trial was not financed in any way (at least initially). It was a small, independent study comparing two approved techniques, so the sponsor had to avoid expensive software or services.
-- Another reason for software customization is that treatment groups were 'blind' for people who assessed effectiveness and... also for statistical analysis (treatment administration was open-label). This means that the person in charge of data analysis must know which group is assigned to a patient, but doesn't know what treatment is assigned to either group.
+- Another reason for software customization is that treatment groups were partially 'blind': for people who assessed effectiveness and... also for statistical analysis (treatment administration was open-label). This means that the person in charge of data analysis must know which group is assigned to a patient, but doesn't know what treatment is assigned to either group.
 
 To tackle the points above, my app should have two main features:
 
